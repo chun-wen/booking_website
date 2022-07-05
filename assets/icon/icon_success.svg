@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/icon_success</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/icon_success">
+            <circle id="Combined-Shape" fill="#6CC978" cx="10" cy="10" r="7"></circle>
+            <polygon id="Path" stroke="#FFFFFF" stroke-width="0.5" fill="#FFFFFF" fill-rule="nonzero" transform="translate(9.942641, 8.842641) rotate(-315.000000) translate(-9.942641, -8.842641) " points="11.1926407 11.5926407 7.69264069 11.5926407 7.69264069 12.5926407 12.1926407 12.5926407 12.1926407 5.09264069 11.1926407 5.09264069"></polygon>
+        </g>
+    </g>
+</svg>
