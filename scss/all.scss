@@ -2,13 +2,190 @@ html,
 body {
   height: 100%;
   margin: 0;
+  background-color: #ffffff;
 }
 .wrapper {
   min-height: 100%;
 }
+
+header {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.navbar {
+  order: 0;
+  display: flex;
+  height: 64px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px 0px 50px;
+  &-nav {
+    padding-top: 10px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    order: -1;
+  }
+}
+
+.nav-item {
+  opacity: 50%;
+
+  &:hover {
+    opacity: 1;
+    border: 4px solid #000;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+}
+
 .content {
   padding-bottom: 50px;
 }
+
+:root {
+  --swiper-theme-color: white;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 360px;
+  position: relative;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 360px;
+}
+
+.imageSlider {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  text-align: center;
+  color: white;
+  &_text {
+    font-size: 30px;
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev {
+  background-image: url("../assets/icon/icon_prev.svg") !important;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next {
+  background-image: url("../assets/icon/icon_nextButton.svg") !important;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-prev::after {
+  content: "";
+}
+
+.swiper-button-next::after {
+  content: "";
+}
+
+.content {
+  // height: 554px;
+  background-color: #e7e7e7;
+  padding: 40px 50px 10px 50px;
+  &-text {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-title {
+    font-size: 24px;
+    font-weight: regular;
+    font-family: Helvetica;
+  }
+  &-button {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 12px;
+    height: 32px;
+  }
+  &-cardContainer {
+    // min-width: 328px;
+  }
+  &-card {
+    display: flex;
+    justify-content: space-between;
+    grid-column-gap: 20px;
+    &-body {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    &-description {
+      -webkit-line-clamp: 2; // 用来限制在一个块元素显示的文本的行数
+      display: -webkit-box; // 将对象作为弹性伸缩盒模型显示
+      -webkit-box-orient: vertical; //设置或检查伸缩盒对象的子元素的排列方式
+      text-overflow: ellipsis; // 在多行文本的情况下，用...隐藏超出范围的文本
+      word-break: break-all;
+      overflow: hidden;
+      opacity: 0.5;
+      margin-bottom: 40px;
+    }
+    &-footer {
+      &-address {
+        -webkit-line-clamp: 1; // 用来限制在一个块元素显示的文本的行数
+        display: -webkit-box; // 将对象作为弹性伸缩盒模型显示
+        -webkit-box-orient: vertical; //设置或检查伸缩盒对象的子元素的排列方式
+        text-overflow: ellipsis; // 在多行文本的情况下，用...隐藏超出范围的文本
+        word-break: break-all;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.card-footer-align {
+  opacity: 0.5;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 50px 10px 50px;
+  &_left {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+}
+
 .footer {
   height: 100px; /*設定footer本身高度*/
   margin-top: -100px; /*隨footer高度需做調整*/
