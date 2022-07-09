@@ -16,13 +16,17 @@ img {
   max-width: 100%;
 }
 
+h6 {
+  margin-bottom: 0;
+}
+
 .navbar {
   order: 0;
   display: flex;
   height: 64px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0px 50px 0px 50px;
+  padding: 0px;
   &-nav {
     padding-top: 10px;
     height: 64px;
@@ -147,6 +151,19 @@ img {
     &-body {
       padding-top: 10px;
       padding-bottom: 10px;
+      &-text {
+        display: flex;
+        > h6 {
+          padding-left: 10px;
+        }
+      }
+      &-time {
+        opacity: 0.5;
+      }
+      &-Container {
+        display: flex;
+        justify-content: space-between;
+      }
     }
     &-description {
       -webkit-line-clamp: 2; // 用来限制在一个块元素显示的文本的行数
@@ -167,6 +184,12 @@ img {
         word-break: break-all;
         overflow: hidden;
       }
+      &-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        margin-top: 10px;
+      }
     }
   }
 }
@@ -175,15 +198,36 @@ img {
   opacity: 0.5;
 }
 
+.card-footer {
+  background: white;
+}
+
 .description {
   display: flex;
   justify-content: space-between;
+  grid-column-gap: 20px;
   padding: 40px 50px 10px 50px;
+  background-color: #f3f3f3;
   &_left {
     display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
+    flex-direction: column;
+    &-text {
+      display: flex;
+      justify-content: space-between;
+    }
   }
+  &_right {
+    display: flex;
+    flex-direction: column;
+    &-text {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.card-img-top {
+  height: 100%;
 }
 
 .footer {
